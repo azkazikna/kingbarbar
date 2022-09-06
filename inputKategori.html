@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | KingBarbar Store</title>
+    <!-- Icon -->
+    <link rel="icon" href="dist/img/logo/logo.webp">
+    <!-- Font Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/27e42df87e.js" crossorigin="anonymous"></script>
+    <!-- Swiper JS -->
+    <link rel="stylesheet" href="dist/css/swiper-bundle.css">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="dist/css/output.css">
+</head>
+
+<body>
+    <!-- Top bar Start  -->
+    <section id="topbar" class="bg-[#F5F5F5]">
+        <div class="container mx-auto flex justify-between items-center px-4 py-4">
+            <div class="w-full flex gap-1 md:gap-4 flex-col md:flex-row">
+                <div class="flex items-center gap-1 text-xs">
+                    <i class="fa-solid fa-envelope text-blue-600"></i>
+                    <p>kingbarbar@gmail.com</p>
+                </div>
+                <div class="flex items-center gap-1 text-xs">
+                    <i class="fa-solid fa-phone text-blue-600"></i>
+                    <p>+62 1234 1234 123</p>
+                </div>
+            </div>
+            <div class="w-full flex gap-3 justify-end">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-youtube"></i>
+                <i class="fa-brands fa-whatsapp"></i>
+            </div>
+        </div>
+    </section>
+    <!-- Top bar End  -->
+
+    <!-- Header Start -->
+    <header
+        class="bg-transparent absolute top-0 left-0 w-full flex items-center z-index-10 transition duration-500 pt-20 lg:pt-14">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between relative gap-16">
+                <div class="px-4" class="w-full">
+                    <a href="/" class="w-full">
+                        <div class="flex items-center">
+                            <img src="dist/img/logo/logo.png" alt="" class="w-16 h-16">
+                            <h1 class="font-bold text-xl lg:text-3xl text-primary py-6">KINGBARBAR</h1>
+                        </div>
+                    </a>
+                </div>
+
+                <form action="" class="w-full">
+                    <input type="search" class="bg-[#F5F5F5] pl-9 pr-4 py-4 rounded-full w-full empty" id="iconified"
+                        placeholder="&#xF002;&nbsp; Search">
+                </form>
+            </div>
+            <div class="flex items-center px-4 container mx-auto">
+                <nav id="nav-menu" class="w-full block static bg-transparent shadow-none rounded-none">
+                    <ul class="flex justify-between">
+                        <li class="group"><a href="tentang.html"
+                                class="md:text-base text-dark py-2 flex group-hover:text-primary text-sm">Tentang</a>
+                        </li>
+                        <li class="group"><a href="kategoris.html"
+                                class="md:text-base text-dark py-2 flex group-hover:text-primary text-sm">Kategori</a>
+                        </li>
+                        <li class="group"><a href="produks.html"
+                                class="md:text-base text-dark py-2 flex group-hover:text-primary text-sm">Produk</a>
+                        </li>
+                        <li class="group"><a href="kontak.html"
+                                class="md:text-base text-dark py-2 flex group-hover:text-primary text-sm">Kontak</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- input Section Start -->
+    <section id="input" class="py-32">
+        <div class="container mx-auto mt-14 px-4">
+            <label class="block mt-5" for="nama">Nama Kategori <span class="text-red-500">*</span></label>
+            <input type="text" name="nama" id="nama" class="p-4 w-full bg-[#F5F5F5] rounded-xl mt-2">
+            <label class="block mt-5" for="deskripsi">Deskripsi <span class="text-red-500">*</span></label>
+            <input type="text" name="deskripsi" id="deskripsi" class="p-4 w-full bg-[#F5F5F5] rounded-xl mt-2">
+            <button type="submit" id="tambah" class="px-7 py-2 bg-blue text-white rounded-lg mt-5">Tambah</button>
+        </div>
+    </section>
+    <!-- input Section End -->
+
+
+    <script src="dist/js/swiper-bundle.js"></script>
+    <!-- Custom Script -->
+    <script src="dist/js/script.js"></script>
+    <script>
+        document.querySelector('#tambah').addEventListener('click', function (e) {
+            jsRESTClientPOST();
+        });
+
+        function jsRESTClientPOST() {
+            let url = 'https://kingbarbar-api.herokuapp.com/api/v1/kategori/create/'
+            let formData = new FormData();
+            var file = document.querySelector('#img')
+            formData.append("nama", document.querySelector('#nama').value);
+            formData.append("deskripsi", document.querySelector('#deskripsi').value);
+
+            fetch(url, {
+                method: 'POST',
+                body: formData
+            })
+                .then(res => res.text())
+                .then(teks => console.log(teks))
+                .catch(err => console.log(err));
+        }
+    </script>
+</body>
+
+</html>

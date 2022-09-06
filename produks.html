@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | KingBarbar Store</title>
+    <!-- Icon -->
+    <link rel="icon" href="dist/img/logo/logo.webp">
+    <!-- Font Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/27e42df87e.js" crossorigin="anonymous"></script>
+    <!-- Swiper JS -->
+    <link rel="stylesheet" href="dist/css/swiper-bundle.css">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="dist/css/output.css">
+</head>
+
+<body class="text-primary">
+    <!-- Top bar Start  -->
+    <section id="topbar" class="bg-[#F5F5F5]">
+        <div class="container mx-auto flex justify-between items-center px-4 py-4">
+            <div class="w-full flex gap-1 md:gap-4 flex-col md:flex-row">
+                <div class="flex items-center gap-1 text-xs">
+                    <i class="fa-solid fa-envelope text-blue-600"></i>
+                    <p>kingbarbar@gmail.com</p>
+                </div>
+                <div class="flex items-center gap-1 text-xs">
+                    <i class="fa-solid fa-phone text-blue-600"></i>
+                    <p>+62 1234 1234 123</p>
+                </div>
+            </div>
+            <div class="w-full flex gap-5 justify-end">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-youtube"></i>
+                <i class="fa-brands fa-whatsapp"></i>
+            </div>
+        </div>
+    </section>
+    <!-- Top bar End  -->
+
+    <!-- Header Start -->
+    <header
+        class="bg-transparent absolute top-0 left-0 w-full flex items-center z-index-10 transition duration-500 pt-20 lg:pt-14">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between relative gap-16">
+                <div class="px-4" class="w-full">
+                    <a href="/" class="w-full">
+                        <div class="flex items-center">
+                            <img src="dist/img/logo/logo.png" alt="" class="w-16 h-16">
+                            <h1 class="font-bold text-xl lg:text-3xl text-primary py-6">KINGBARBAR</h1>
+                        </div>
+                    </a>
+                </div>
+
+                <form action="" class="w-full">
+                    <input type="search" class="bg-[#F5F5F5] pl-9 pr-4 py-4 rounded-full w-full empty" id="iconified"
+                        placeholder="&#xF002;&nbsp; Search">
+                </form>
+            </div>
+            <div class="flex items-center px-4 container mx-auto">
+                <nav id="nav-menu" class="w-full block static bg-transparent shadow-none rounded-none">
+                    <ul class="flex justify-between">
+                        <li class="group"><a href="tentang.html"
+                                class="md:text-base text-dark py-2 flex group-hover:text-primary text-sm">Tentang</a>
+                        </li>
+                        <li class="group"><a href="kategoris.html"
+                                class="md:text-base text-dark py-2 flex group-hover:text-primary text-sm">Kategori</a>
+                        </li>
+                        <li class="group"><a href="produks.html"
+                                class="md:text-base text-dark py-2 flex group-hover:text-primary text-sm">Produk</a>
+                        </li>
+                        <li class="group"><a href="kontak.html"
+                                class="md:text-base text-dark py-2 flex group-hover:text-primary text-sm">Kontak</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- main section start -->
+    <section id="main" class="py-32">
+        <div class="container mx-auto">
+            <h1 class="mt-20 text-2xl md:text-3xl font-bold">Produk Kami:</h1>
+            <div class="flex gap-2 mt-5" id="kategoriList">
+
+            </div>
+        </div>
+        <div class="container mx-auto grid grid-cols-4 gap-x-2 gap-y-5 mt-10" id="produk">
+
+        </div>
+    </section>
+    <!-- main section end -->
+
+    <!-- footer start -->
+    <footer class="pt-24 pb-6 bg-[#1A1A1A]">
+        <div class="container mx-auto flex flex-col lg:flex-row justify-between text-white px-4 pb-10">
+            <div class="">
+                <h1 class="text-2xl md:text-3xl font-bold">KINGBARBAR</h1>
+                <p class="mb-3 mt-2">Follow us:</p>
+                <div class="flex gap-3">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+            </div>
+            <div class="flex gap-20 flex-col lg:flex-row">
+                <div class="main">
+                    <h1 class="font-bold text-xl lg:text-2xl">Main</h1>
+                    <ul class="mt-5">
+                        <li class="mt-2"><a href="">Tentang</a></li>
+                        <li class="mt-2"><a href="">Produk</a></li>
+                        <li class="mt-2"><a href="">Kategori</a></li>
+                    </ul>
+                </div>
+                <div class="layanan">
+                    <h1 class="font-bold text-xl lg:text-2xl">Layanan</h1>
+                    <ul class="mt-5">
+                        <li class="mt-2"><a href="">Kontak & Layanan</a></li>
+                    </ul>
+                </div>
+                <div class="kontak">
+                    <h1 class="font-bold text-xl lg:text-2xl">Kontak</h1>
+                    <ul class="mt-5">
+                        <li class="mt-2"><a href="">kingbarbar@gmail.com</a></li>
+                        <li class="mt-2"><a href="">+62 1234 1234 123</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container mx-auto">
+            <hr>
+        </div>
+        <div class="container mx-auto px-4 flex text-[#555] gap-5 py-5">
+            <p>&copy; KINGBARBAR FOOD STORE. All rights reserved.</p>
+            <a href="">Privacy Policy</a>
+            <a href="">Terms of use</a>
+        </div>
+    </footer>
+    <!-- footer end -->
+
+    <script src="dist/js/swiper-bundle.js"></script>
+    <!-- Custom Script -->
+    <script src="dist/js/script.js"></script>
+    <script>
+        function numberWithCommas(x) {
+            return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+        }
+
+        fetch("https://kingbarbar-api.herokuapp.com/api/v1/kategori/")
+            .then((response) => response.json())
+            .then(function (data) {
+                data.forEach(data => {
+                    document.getElementById('kategoriList')
+                        .insertAdjacentHTML('beforeend',
+                            `<button class="bg-primary text-white px-5 py-1 rounded-xl kategori-btn" id="${data.slug}">${data.nama}</button>`
+                        )
+                })
+            })
+
+        const kategoriBtns = document.querySelectorAll('.kategori-btn');
+        const produkItems = document.querySelectorAll('.produk-item');
+
+        kategoriBtns.forEach((btn) => {
+            btn.addEventListener('click', () => {
+                showProdukMenu(btn.id);
+            })
+        })
+
+        function showProdukMenu(slugKategori) {
+            fetch("https://kingbarbar-api.herokuapp.com/api/v1/produk/kategori/" + slugKategori)
+                .then((response) => response.json())
+                .then(function (data) {
+                    data.forEach(data => {
+                        document.getElementById('produk')
+                            .insertAdjacentHTML('beforeend',
+                                `
+                            <a href="produk.html?id=${data.id}" class="${data.kategori.nama} produk-item">
+                                <div class="card rounded-2xl overflow-hidden shadow-lg">
+                                    <div class="card-img">
+                                        <img src="${data.img_url}" alt="" class="w-full h-56 object-cover">
+                                    </div>
+                                    <div class="card-body pt-4 pb-6 px-4">
+                                        <p class="text-sm text-[#aaa]">${data.kategori.nama}</p>
+                                        <h3 class="text-lg md:text-xl mt-2 font-bold">${data.nama}</h3>
+                                        <p class="mt-2 text-[14px]">${data.deskripsi}
+                                        </p>
+                                        <div class="flex mt-2 gap-1">
+                                            <h1 class="text-xl lg:text-2xl font-bold">Rp ${numberWithCommas(data.harga)}</h1>
+                                            <p class="text-sm text-[#555]">/ 50 gram</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>`
+                            )
+                    })
+                })
+        }
+    </script>
+</body>
+
+</html>
